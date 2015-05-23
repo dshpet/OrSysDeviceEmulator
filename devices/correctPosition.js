@@ -46,22 +46,48 @@ setInterval(function(){
 			"value" : randomNumber
 		};
 	}
+
+	var seatBottomEqualPressure = 0;
+	var seatTopEqualPressure = 0;
 	for (var i = 0; i < seatMin; i++){
-		var randomNumber = Math.ceil(Math.random() * 100);
+		var randomNumber = 0;
+		switch(i){
+			case 0 : {
+				randomNumber = getRandomInt(70, 100);
+				seatBottomEqualPressure = randomNumber;
+				break;
+			}
+			case 1 : {
+				//randomNumber = getRandomInt(70, 100);
+				randomNumber = seatBottomEqualPressure;
+				break;
+			}
+			case 2 : {
+				randomNumber = getRandomInt(50, 70);
+				seatTopEqualPressure = randomNumber;
+				break;
+			}
+			case 3 : {
+				//randomNumber = getRandomInt(50, 70);
+				randomNumber = seatTopEqualPressure;
+				break;
+			}
+		}
 		deviceData.pressureSeat[i] = {
 			"value" : randomNumber
 		};
 	}
+	var armrestEqualPressure = getRandomInt(0, 100);
 	for (var i = 0; i < armrestMin; i++){
-		var randomNumber = Math.ceil(Math.random() * 100);
+		//var randomNumber = 0;
 		deviceData.pressureLeftArmrest[i] = {
-			"value" : randomNumber
+			"value" : armrestEqualPressure
 		};
 	}
 	for (var i = 0; i < armrestMin; i++){
-		var randomNumber = Math.ceil(Math.random() * 100);
+		//var randomNumber = Math.ceil(Math.random() * 100);
 		deviceData.pressureRightArmrest[i] = {
-			"value" : randomNumber
+			"value" : armrestEqualPressure
 		};
 	}
 
