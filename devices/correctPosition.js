@@ -9,7 +9,7 @@ console.log('started');
 setInterval(function(){
 	console.log("sending data...");
 	var deviceData = {
-	  id: '1337ff',
+	  googleId: '111453140201070550060',
 	  pressureBackbone: [],
 	  pressureSeat:[],
 	  pressureLeftArmrest:[],
