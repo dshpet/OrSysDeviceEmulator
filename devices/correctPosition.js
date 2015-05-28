@@ -8,8 +8,10 @@ function getRandomInt(min, max) {
 console.log('started');
 setInterval(function(){
 	console.log("sending data...");
+	//mawa 111452271034795776223
+	//me 111453140201070550060
 	var deviceData = {
-	  googleId: '111453140201070550060',
+	  googleId: '111452271034795776223',
 	  pressureBackbone: [],
 	  pressureSeat:[],
 	  pressureLeftArmrest:[],
